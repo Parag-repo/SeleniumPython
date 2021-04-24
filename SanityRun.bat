@@ -1,2 +1,2 @@
-pytest -s -v -m "sanity" --html=./Reports/report.html testCases/
+pytest -m "sanity" testCases/test_login.py
 
