@@ -24,7 +24,7 @@ class Test_002_DDT_Login:
 
         self.rows = XLUtils.getRowCount(self.path, 'Sheet1')
         print("Number of rows are: ", self.rows)
-
+        lst_status = []
         for r in range(2, self.rows + 1):
             self.user = XLUtils.readData(self.path, 'Sheet1', r, 1)
             self.password = XLUtils.readData(self.path, 'Sheet1', r, 2)
@@ -37,7 +37,7 @@ class Test_002_DDT_Login:
 
             act_title = self.driver.title
             exp_title = "Dashboard / nopCommerce administration"
-            lst_status = []
+
             if act_title == exp_title:
                 if self.exp == "Pass":
                     self.logger.info("PASSED")
